@@ -2,6 +2,8 @@ body {
     overflow-x: hidden;
 }
 
+/* ! NAVBAR */
+
 .logo {
     height: 9vh;
 }
@@ -10,7 +12,7 @@ body {
     width: 100%;
     object-fit: cover;
     filter: brightness(0.9);
-    position: relative;  /* Changed from absolute to relative */
+    position: relative; 
 
 }
 
@@ -25,14 +27,16 @@ body {
     background-color: #ffffff4d;
 }
 
+/* ! SECTION 1 ! */
+
 .bg-custom {
     background-color: #B89F86; 
   }
 
   .bg-custom img {
-    width: 80px;  /* Adjust as needed */
-    height: 80px; /* Adjust as needed */
-    object-fit: contain; /* This ensures the images do not stretch */
+    width: 80px;  
+    height: 80px; 
+    object-fit: contain; 
 }
   
  .btnProject {
@@ -54,16 +58,66 @@ body {
 .icon-line2 {
     height: 2px;
     background-color: rgba(245, 245, 245, 0.5); ;
-    width: 20%; /* Short line above and below the text */
-    margin: 0 auto; /* Center the line */
+    width: 20%; 
+    margin: 0 auto; 
   }
 
-  .icon-line {
+.icon-line {
     height: 2px;
     background-color: #F5F5F5; 
-    width: 5%; /* Short line above and below the text */
-    margin: 0 auto; /* Center the line */
-  }
+    width: 5%; 
+    margin: 0 auto; 
+}
 
 
+/* ! CONTACT ! */
+
+.contact-section {
+    background-color: #ffffff;
+}
+
+.contact-section .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+
+.logo-swissroc {
+    width: 266.76px;
+    height: 64px;
+}
+
+
+.btnContact2 {
+    background-color: #175BAD;
+    color: white;
+    width: 150px; 
+}
+
+.btnContact2:hover {
+    color: #ffffff;
+    background-color: #B89F86;
+}
+
+
+
+
+ /* ! FOOTER ! */
+
+.footer {
+    background-color: #7C8A77; 
+}
+
+.text-custom, .privacy-link {
+    color: #E8EDF1; 
+}
+
+.privacy-link {
+    text-decoration: none; 
+}
+
+.privacy-link:hover {
+    text-decoration: underline;
+}
 
