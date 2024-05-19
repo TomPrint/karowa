@@ -1,8 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+@import url('https://fonts.googleapis.com/css2?family=Prociono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Prociono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Prata&family=Prociono&display=swap');
 
 
+.prociono-regular {
+    font-family: "Prociono", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.prata-regular {
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+ }
+
+
+.bodoni-moda {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
   
   
   

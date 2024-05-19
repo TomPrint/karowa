@@ -10,11 +10,10 @@ body {
     width: 100%;
     object-fit: cover;
     filter: brightness(0.9);
-    position: absolute;
-    top:0;
-    left: 0;
-    z-index: -1;
+    position: relative;  /* Changed from absolute to relative */
+
 }
+
 
 .btnContact {
     background-color: #B89F86;
@@ -25,3 +24,46 @@ body {
 .btnContact:hover {
     background-color: #ffffff4d;
 }
+
+.bg-custom {
+    background-color: #B89F86; 
+  }
+
+  .bg-custom img {
+    width: 80px;  /* Adjust as needed */
+    height: 80px; /* Adjust as needed */
+    object-fit: contain; /* This ensures the images do not stretch */
+}
+  
+ .btnProject {
+    background-color: #7C8A77;
+    color: #ffffff;
+    width: 150px;
+    
+  }
+
+  .btnProject:hover {
+    color: #ffffff;
+    background-color: #B89F86;
+}
+  
+.white-text{
+    color: #F5F5F5
+}
+  
+.icon-line2 {
+    height: 2px;
+    background-color: rgba(245, 245, 245, 0.5); ;
+    width: 20%; /* Short line above and below the text */
+    margin: 0 auto; /* Center the line */
+  }
+
+  .icon-line {
+    height: 2px;
+    background-color: #F5F5F5; 
+    width: 5%; /* Short line above and below the text */
+    margin: 0 auto; /* Center the line */
+  }
+
+
+
