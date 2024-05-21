@@ -121,3 +121,7 @@ body {
     text-decoration: underline;
 }
 
+.bg-img-spokoj-section{
+    background-image: url("/assets/augustine-wong-li0iC0rjvvg-unsplash 1.png");
+    height: 700px;
+}
