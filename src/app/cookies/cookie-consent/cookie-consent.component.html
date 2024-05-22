@@ -1,0 +1,45 @@
+<div *ngIf="showBanner" class="modal show d-block" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header cookie-bg">
+                <h5 class="modal-title font-weight-bold">
+                    <i class="bi bi-cookie me-2"></i> 
+                    COOKIES
+                </h5>
+            </div>
+            <div class="modal-body cookie-bg">
+                <div>
+                    <input type="checkbox" id="necessary" [(ngModel)]="acceptNecessary" checked disabled>
+                    <label for="necessary" class="prata-regular mx-2">Basic - Podstawowe</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="analytics" [(ngModel)]="acceptAnalytics">
+                    <label for="analytics" class="prata-regular mx-2">Analytic - Analityczne</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="marketing" [(ngModel)]="acceptMarketing">
+                    <label for="marketing" class="prata-regular mx-2">Marketing - Marketingowe</label>
+                </div>
+                <hr>
+                <p>
+                    Używamy plików cookies do zapewnienia prawidłowego działania strony. Nie zbieramy żadnych danych osobowych. Klikając "OK", wyrażasz zgodę na użycie wspomnianych plików cookies. Więcej informacji znajdziesz na stronie <a href="/privacy-policy">Polityka Prywatności</a>.
+                </p>
+                <hr>
+                <p>
+                    We use cookies to ensure the proper functioning of the website. We do not collect any personal data without your consent.
+                    By clicking 'OK,' you consent to the use of the mentioned cookies. More information can be found on our <a href="/privacy-policy">Privacy Policy</a> page.
+                </p>
+            </div>
+            <div class="modal-footer cookie-bg justify-content-between">
+                <button type="button" class="btn btn-success" (click)="acceptCookies()">
+                    <i class="bi bi-hand-thumbs-up me-2"></i>
+                   OK
+                </button>
+                <button type="button" class="btn btn-outline-danger" (click)="rejectCookies()">
+                    <i class="bi bi-x-lg me-2"></i>
+                    Odrzuć
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
