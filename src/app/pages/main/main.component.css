@@ -125,15 +125,25 @@ body {
 
 .bg-img-spokoj-section {
     background-image: url("/assets/augustine-wong-li0iC0rjvvg-unsplash 1.png");
+    background-repeat: no-repeat;
+    background-position: left top;
 }
 
+@media (max-width: 1800px) {
+    .bg-img-spokoj-section {
+        background-repeat: repeat; /* Change to repeat on screens smaller than medium */
+        /* Change the position to center on screens smaller than medium */
+    }
+}
+    
 .image-translate{
-    transform: translateY(-100px);  
+    transform: translateY(-100px) translateX(-80px);  
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1300px) {
     .image-translate {
-      transform: none
+      transform: none;
+      transform: translateY(-100px);
      /* Dostosuj wartość paddigu według potrzeb */
     }
   }
