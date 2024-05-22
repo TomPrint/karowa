@@ -121,17 +121,19 @@ body {
     text-decoration: underline;
 }
 
-.bg-img-spokoj-section{
-    background-image: url("/assets/augustine-wong-li0iC0rjvvg-unsplash 1.png");   
+/* SECTION WITH MARBLE BB */
+
+.bg-img-spokoj-section {
+    background-image: url("/assets/augustine-wong-li0iC0rjvvg-unsplash 1.png");
 }
 
-.big-padding {
-    padding-top: 1200px;
+.image-translate{
+    transform: translateY(-100px);  
 }
 
 @media (max-width: 767px) {
-    .big-padding {
-      padding-top: 800px;
-     /* Dostosuj wartość paddingu według potrzeb */
+    .image-translate {
+      transform: none
+     /* Dostosuj wartość paddigu według potrzeb */
     }
   }
