@@ -122,36 +122,7 @@ body {
 }
 
 .bg-img-spokoj-section{
-    background-image: url("/assets/augustine-wong-li0iC0rjvvg-unsplash 1.png");
-    height: 1800px;
-}
-
-.image-overlay {
-    position: absolute;
-    top: 22%;
-    left: -80px; /* Adjust this value to control how much the image overlaps */
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-.relative-wrapper {
-    position: relative;
-}
-
-@media (max-width: 767.98px) {
-    .relative-wrapper {
-        position: static;
-    }
-    .image-overlay {
-        position: static;
-        transform: none;
-        left: 0;
-        top: 0;
-    }
-}
-
-.image-margin{
-    margin-top: 300px;
+    background-image: url("/assets/augustine-wong-li0iC0rjvvg-unsplash 1.png");   
 }
 
 .big-padding {
