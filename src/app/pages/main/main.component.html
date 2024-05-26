@@ -4,30 +4,31 @@
 <!-- Navbar Section -->
 <nav class="navbar navbar-expand-lg navbar-dark my-3 position-absolute top-0 start-0 w-100" style="z-index: 10;">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <div class="navbar-brand">
         <img class="logo" src="/assets/Logo.png" alt="Logo">
-      </a>
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item px-4">
-            <a class="nav-link prata-regular" aria-current="page" href="#">Projekt</a>
+            <a class="nav-link prata-regular" aria-current="page" href="https://drive.google.com/file/d/1IwHbh8PQgEwuNpYp1gH6TONO11WdQvEu/view?usp=drive_link">Projekt</a>
           </li>
           <li class="nav-item px-4">
-            <a class="nav-link prata-regular" href="#">Lokalizacja</a>
+            <a class="nav-link prata-regular" href="#karowa">Lokalizacja</a>
           </li>
           <li class="nav-item px-4">
-            <button type="button" class="btn btnContact prata-regular">Kontakt</button>
-          </li>
+            <a class="btn btnContact prata-regular" role="button" href="#contact">Kontakt</a>
+        </li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!--Karowa 26 SECTION  -->
-<section>
+  <div id="karowa"><br></div>
+<section >
     <div class="container my-5">
         <div class="row">
           <div class="col-xl-4">
@@ -35,8 +36,9 @@
             <p class="prociono-regular mx-4">Witamy w oazie luksusu w sercu prywatności, gdzie nowoczesność spotyka się z doskonalosci. Nasz ekskluzywny projekt zapewnia nie tylko wyrafinowane wnętrza, ale również najnowsze rozwiązania technologiczne, gwarantujące oszczędność energii i komfort na najwyższym poziomie. </p>
             <p class="prociono-regular mx-4"> Odkryj niezrównany standard mieszkania, gdzie każdy detal został zaprojektowany z myślą o Twoim wyjątkowym doświadczeniu. Zapraszamy do Karowa 26 - Twojego nowego wymarzonego domu!"</p>
             <div class="text-center">
-                <button type="button" class="btn btnProject prata-regular mt-3 mb-5">Projekt</button>
-            </div>
+              <a href="https://drive.google.com/file/d/1IwHbh8PQgEwuNpYp1gH6TONO11WdQvEu/view?usp=drive_link" class="btn btnProject prata-regular mt-3 mb-5" role="button">Projekt</a>
+          </div>
+          
            </div>
          <div class="col-xl-8">
             <img src="/assets/projekty.png" alt="Interior Design" class="img-fluid">
@@ -95,7 +97,7 @@
               maksymalizuje ekspozycję na światło słoneczne, tworząc jasne i zachęcające przestrzenie mieszkalne,
               które poprawiają nastrój i samopoczucie.
             </p>
-            <button class="btn btnProject prata-regular mb-5">Więcej</button>
+            <a href="#contact" class="btn btnProject prata-regular mb-5" role="button">Więcej</a>
             <p class="mb-5"></p>
           </div>
         </div>
@@ -123,7 +125,7 @@
               standardowi wykończenia. Od wykwintnych podłóg z twardego drewna po designerską 
               armaturę, każdy szczegół jest starannie dopracowany, aby podnieść komfort życia.
             </p>
-            <button class="btn btnProject prata-regular mb-5">Więcej</button>
+            <!-- <a href= "#contact" class="btn btnProject prata-regular mb-5" role="button">Więcej</a> -->
           </div>
         </div>  
       </div>
@@ -133,10 +135,43 @@
 </section>
 
 
-<!-- CONTACT SECTION -->
 
-<section class="contact-section py-3 mb-5">
-  <div class="container">
+
+<!--! CAROUSEL ! -->
+<br>
+<div class="carousel-background d-flex justify-content-center align-items-center pt-3 pb-5">
+  <div class="container d-flex justify-content-center align-items-center">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div *ngFor="let image of images; let i = index" class="carousel-item" [ngClass]="{'active': i === currentIndex, 'next': i === nextIndex, 'prev': i === prevIndex, 'inactive': i !== currentIndex && i !== nextIndex && i !== prevIndex}">
+          <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+            <img [src]="image" class="carousel-image" alt="Slide {{i + 1}}">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" (click)="previousImage()">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" (click)="nextImage()">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- CONTACT SECTION -->
+<br>
+<section class="contact-section mb-5 mt-5">
+  <div class="container" id="contact">
       <div class="row align-items-center">
           <div class="col-md-6 text-center text-md-left">
               <div class="logo-container mx-5">
@@ -145,22 +180,23 @@
               </div>
           </div>
           <div class="col-md-6 text-md-right">
-              <div class="row justify-content-center align-items-center">
-                  <div class="col-md-8 text-center">
-                      <h2 class="prata-regular my-5">KAROWA 26</h2>
-                      <p class="prata-regular">Twój wymarzony dom już teraz!</p>
-                      <!-- Telephone Link -->
-                      <a href="tel:+48000000" class="mx-2">
-                          <i class="bi bi-telephone-fill"></i> +48 000000
-                      </a>
-                      <!-- Email Link -->
-                      <a href="mailto:email&#64;email.com" >
-                        <i class="bi bi-envelope-fill"></i> email&#64;email.com
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="prata-regular pt-5 pb-3">KAROWA 26</h2>
+                    <p class="prata-regular">Twój wymarzony dom już teraz!</p>
+                    <!-- Telephone Link -->
+                    <a href="tel:+48606303003" class="contact-link d-flex align-items-center justify-content-center my-2">
+                        <i class="bi bi-telephone-fill px-2"></i> +48 606303003
                     </a>
-                    
-                  </div>
-              </div>
-          </div>
+                    <!-- Email Link -->
+                    <a href="mailto:domy.karowa&#64;gmail.com" class="contact-link d-flex align-items-center justify-content-center my-2">
+                        <i class="bi bi-envelope-fill px-2"></i> domy.karowa&#64;gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        
       </div>
   </div>
 </section>
@@ -169,20 +205,60 @@
 
 
 
-
 <!-- FOOTER -->
 
 
-<footer class="footer bg-custom text-custom py-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 text-md-start text-center prata-regular">
-          © 2024 Karowa™ powered by Ammer House. All Rights Reserved.
-        </div>
-        <div class="col-md-6 text-md-end text-center prata-regular">
-          <a href="#privacy-policy" class="privacy-link">Polityka prywatności</a>
+<footer class="footer bg-custom text-custom py-3 mt-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-md-start text-center prata-regular">
+        © 2024 Karowa™ powered by Ammer House. All Rights Reserved.
+      </div>
+      <div class="col-md-6 text-md-end text-center prata-regular">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal" class="privacy-link">Polityka prywatności</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- TERMS AND CONDITIONS CALLED BY MODAL -->
+
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="termsModalLabel">Warunki Prywatności</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="lead">
+          <h3 class="mt-4 lead">1) Postanowienia ogólne</h3>
+          <p class="lead">
+            Niniejsza Polityka Prywatności określa zasady przetwarzania danych osobowych oraz prawa Użytkowników, zawiera informacje dotyczące Administratora Danych Osobowych, a także wykorzystania plików cookie. Dane osobowe Użytkowników są chronione przez MCM SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ zgodnie z przepisami Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych) oraz Sprostowania do Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych) oraz Ustawy z dnia 10 maja 2018 r. o ochronie danych osobowych.
+          </p>
+          <h3 class="lead">2) Podstawowe Pojęcia</h3>
+          <p class="lead">
+            Administrator danych osobowych – MCM SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ, UL. ELBLĄSKA 14, 01-737 WARSZAWA.<br>
+            RODO – Rozporządzenie Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE. Ustawa – ustawa z dnia 10 maja 2018 r. o ochronie danych osobowych.
+          </p>
+          <h3 class="lead">3) Cel Przetwarzania Danych Osobowych</h3>
+          <p class="lead">
+            Badanie satysfakcji Użytkownika oraz marketing promujący Administratora i jego produkty oraz usługi, co stanowi spełnienie warunku zgodności z prawem przetwarzania danych, określonego w art. 6 ust. 1 lit. f RODO, jako niezbędnych do celów wynikających z prawnie uzasadnionych interesów realizowanych przez Administratora.
+          </p>
+          <h3 class="lead">4) Odbiorca Danych Osobowych</h3>
+          <p class="lead">
+            Administrator może przekazać dane osobowe, wskazane w pkt 16, podmiotom uprawnionym do otrzymania danych osobowych na podstawie przepisów prawa, decyzji organu administracji publicznej lub orzeczenia sądowego.
+          </p>
+          <h3 class="lead">5) Pliki Cookie</h3>
+          <p class="lead">
+            Plik cookie to krótki tekst wysyłany do przeglądarki internetowej przez serwis internetowy, który w danej chwili odwiedza Użytkownik. Dzięki czemu serwis zapamiętuje informacje o ustawieniach przeglądarki, a następna wizyta Użytkownika na tej stronie jest bardziej efektywna, pozwalając na łatwiejsze logowanie do usług Administratora. Administrator może przetwarzać dane zawarte w plikach cookie, w następującym celu: dostosowanie funkcjonalności dostarczanych przez Administratora, zgodnie z oczekiwaniami Użytkownika, wliczając treści reklamowe i statystyki, co odbywa się anonimowo.
+          </p>
+          <h3 class="lead">6) Postanowienia Końcowe</h3>
+          <p class="lead">
+            W sprawach nieuregulowanych w Polityce Prywatności stosuje się przepisy prawa polskiego. Administrator może dokonać zmian w Polityce Prywatności w każdym czasie. Użytkownik odwiedzający stronę Administratora po raz pierwszy, zostanie poproszony o zapoznanie się z Polityką Prywatności. W każdym czasie wizyty na stronie internetowej Administratora, Użytkownik może także zapoznać się z aktualną Polityką Prywatności, stosując dedykowany odnośnik na dole strony.
+          </p>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
   
