@@ -4,20 +4,21 @@ import { CommonModule } from '@angular/common';
 
 
 
+
 @Component({
-  selector: 'app-main',
-  standalone: true,
-  imports: [PrivacyComponent, CommonModule],
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.css'
+    selector: 'app-main',
+    standalone: true,
+    templateUrl: './main.component.html',
+    styleUrl: './main.component.css',
+    imports: [PrivacyComponent, CommonModule]
 })
 export class MainComponent  {
     
   currentIndex = 0;
     images = [
-      'assets/carousel1.png',
-      'assets/carousel2.png',
-      'assets/carousel3.png',
+      'assets/img-carousel1.jpg',
+      'assets/img-carousel2.jpg',
+      'assets/img-carousel3.jpg',
     ];
 
     get nextIndex() {

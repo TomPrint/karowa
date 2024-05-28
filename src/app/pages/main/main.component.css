@@ -84,8 +84,11 @@ body {
 
 
 .logo-swissroc {
-    width: 266.76px;
-    height: 64px;
+    height: 50px;
+}
+
+.logo-amtech {
+  height: 80px;
 }
 
 
@@ -111,6 +114,19 @@ body {
     text-decoration: underline; /* Add underline on hover and focus */
 }
 
+@media (max-width: 767px) {
+  .contact-section .logo-container {
+    display: flex; /* Ensure it's a flex container */
+    flex-direction: row; /* Arrange items in a row */
+    align-items: center; /* Center align the items vertically */
+    justify-content: center;
+    text-align: center; /* Center align the items horizontally */
+  }
+
+  .logo {
+    margin: 5px; /* Add some space around each logo */
+  }
+}
 
 
 
@@ -162,84 +178,95 @@ body {
   }
 
 
-  /* ! CAROUSEL ! */
-  .carousel-background {
-    background: url('/assets/background_carousel.png') no-repeat center center;
-    background-size: cover;
-    width: 100%;
-    height: 40vh; /* Full viewport height */
-    opacity: 0.95;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .container {
-    height: 100%; /* Full height to help center the carousel */
-  }
-  
-  .carousel-inner {
-    width: 90%; /* Adjust this width to make the carousel wider */
-    max-width: 1200px; /* Increase the maximum width as necessary */
-  }
-  
+ /* ! CAROUSEL ! */
+.carousel-background {
+  background: url('/assets/Bg-carousel.jpg') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 40vh; /* Full viewport height */
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 100%; /* Full height to help center the carousel */
+}
+
+.carousel-inner {
+  width: 90%; /* Adjust this width to make the carousel wider */
+  max-width: 1200px; /* Increase the maximum width as necessary */
+  margin: 0 auto; /* Center the carousel */
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 450px; 
+  transition: transform 0.3s ease-in-out, opacity 0.5s;
+}
+
+.carousel-item.next,
+.carousel-item.prev {
+  transform: scale(0.85);
+  opacity: 0.5;
+}
+
+.carousel-item.active {
+  transform: scale(1.1);
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel-item.inactive {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.carousel-image {
+  max-width: 100%; /* Make images responsive to fit the container */
+  max-height: 100%; /* Make images responsive to fit the container */
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Ensures the image fits within the container without distortion */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Adjust as needed */
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 5;
+}
+
+.carousel-control-prev {
+  left: 10px; /* Adjust as needed */
+}
+
+.carousel-control-next {
+  right: 10px; /* Adjust as needed */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 100%; /* Adjust as needed */
+  height: 100%;
+  background-size: 100%, 100%;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
   .carousel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease-in-out, opacity 0.5s;
+    height: fit-content;
+    max-height: 280px;  /* Set carousel items to occupy full width */
   }
-  
-  .carousel-item.next,
-  .carousel-item.prev {
-    transform: scale(0.85);
-    opacity: 0.5;
-  }
-  
-  .carousel-item.active {
-    transform: scale(1.2);
-    opacity: 1;
-    z-index: 1;
-  }
-  
-  .carousel-item.inactive {
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  .carousel-image {
-    max-height: 400px; /* Set a fixed height for the images */
-    width: auto;
-    height: auto;
-    object-fit: cover; /* Ensures the image covers the entire area without distortion */
-  }
-  
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 5%; /* Adjust as needed */
-    height: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    position: absolute;
-    z-index: 5;
-  }
-  
-  .carousel-control-prev {
-    left: 10px; /* Adjust as needed */
-  }
-  
-  .carousel-control-next {
-    right: 10px; /* Adjust as needed */
-  }
-  
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    width: 100%; /* Adjust as needed */
-    height: 100%;
-    background-size: 100%, 100%;
-  }
-  
-  
+}
+
+
   
   
 

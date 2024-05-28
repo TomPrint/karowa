@@ -4,11 +4,11 @@ import { PrivacyComponent } from './modals/privacy/privacy.component';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, CookieConsentComponent, PrivacyComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [RouterOutlet, CookieConsentComponent, PrivacyComponent]
 })
 export class AppComponent {
   title = 'Karowa26';
